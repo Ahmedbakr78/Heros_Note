@@ -1,0 +1,12 @@
+# markClipper / Heros Note — ignore rules
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.log
+node_modules/
+.cache/
+tmp/
+*.bak

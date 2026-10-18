@@ -1,0 +1,78 @@
+{
+  "manifest_version": 3,
+  "name": "markClipper",
+  "version": "1.1.0",
+  "description": "markClipper — Markdown Web Clipper. Save webpages + photos to perfect Markdown notes. Screenshots, galleries, bulk download. Fast, private, free & unlimited. Panel app.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "markClipper — clip to Markdown (opens panel)"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "tabs",
+    "downloads"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "commands": {
+    "_execute_side_panel": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+K",
+        "mac": "Command+Shift+K"
+      },
+      "description": "Open markClipper panel"
+    },
+    "clip-article": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Clip article as Markdown"
+    },
+    "clip-selection": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Clip selection as Markdown"
+    },
+    "clip-bookmark": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+B",
+        "mac": "Command+Shift+B"
+      },
+      "description": "Clip bookmark (title + link)"
+    },
+    "clip-images": {
+      "description": "Grab all photos from page"
+    },
+    "clip-screenshot": {
+      "description": "Screenshot visible page"
+    }
+  },
+  "author": "Ahmed ABOBAKR",
+  "homepage_url": "https://github.com/Ahmedbakr78/Heros_Note"
+}
